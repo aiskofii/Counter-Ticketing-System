@@ -39,8 +39,6 @@ int main() {
         cout << "\n";
 
         switch (choice) {
-
-            // ---- Option 1: Enqueue -------------------------
         case 1:
             cout << "  Enter customer name: ";
             getline(cin, name);
@@ -52,8 +50,6 @@ int main() {
                 cout << "  Queue size: " << queue.getSize() << " customer(s).\n";
             }
             break;
-
-            // ---- Option 2: Dequeue -------------------------
         case 2:
             if (queue.isEmpty()) {
                 cout << "  [ERROR] The queue is empty. No customers to serve.\n";
@@ -64,8 +60,6 @@ int main() {
                 cout << "  Remaining in queue: " << queue.getSize() << " customer(s).\n";
             }
             break;
-
-            // ---- Option 3: Peek ----------------------------
         case 3:
             if (queue.isEmpty()) {
                 cout << "  [INFO] The queue is empty.\n";
@@ -74,18 +68,12 @@ int main() {
                 cout << "  [INFO] Next customer at the front: \"" << queue.peek() << "\"\n";
             }
             break;
-
-            // ---- Option 4: Display full queue --------------
         case 4:
             queue.displayQueue();
             break;
-
-            // ---- Option 5: Exit ----------------------------
         case 5:
             cout << "  Thank you for using the Bank Queue System. Goodbye!\n\n";
             return 0;
-
-            // ---- Default: Invalid choice -------------------
         default:
             cout << "  [ERROR] Invalid choice. Please enter a number between 1 and 5.\n";
             break;
